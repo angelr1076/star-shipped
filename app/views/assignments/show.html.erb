@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ship:</strong>
+  <%= @assignment.ship.name %>
+</p>
+
+<p>
+  <strong>Job:</strong>
+  <%= @assignment.job.name %>
+</p>
+
+<p>
+  <strong>Ship Owner/Captain:</strong>
+  <%= @assignment.ship.user.email %>
+</p>
+
+<% if current_user && current_user.id == @assignment.ship.user_id %>
+<%= link_to 'Edit', edit_assignment_path(@assignment) %> |
+<% end %>
+<%= link_to 'Back', assignments_path %>
+
+<h5>Warning: you can create a new job but only the ship owner/captain can edit the job or transfer jobs to another ship!!! Jobs are owned by the ship Captain!!!</h5>
+

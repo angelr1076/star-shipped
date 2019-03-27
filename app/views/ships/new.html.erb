@@ -1,0 +1,7 @@
+<body class="splash-ships"></body>
+<h1>New Ship</h1>
+
+<%= render 'form', ship: @ship %>
+
+<br>
+<%= button_to 'Back', ships_path, :method => :get, class: "waves-effect black btn" %>

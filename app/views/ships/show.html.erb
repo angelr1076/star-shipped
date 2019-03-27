@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+  <%=image_tag @ship.image.url(:medium)%>
+<p>
+  <strong>Name:</strong>
+  <%= @ship.name %>
+</p>
+
+<p>
+  <strong>Containers:</strong>
+  <%= @ship.containers %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @ship.location %>
+</p>
+
+<p>
+  <strong>Captain:</strong>
+  <%= @ship.user.email %>
+</p>
+
+<% if current_user && current_user.id == @ship.user_id %>
+<%= link_to 'Edit', edit_ship_path(@ship) %> |
+<% end %>
+
+<%= link_to 'Back', ships_path %>
