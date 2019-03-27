@@ -2,8 +2,8 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.1'
-gem 'paperclip'
-gem 'aws-sdk', '~> 2.3'
+gem "paperclip", "~> 6.0.0"
+gem 'aws-sdk-s3'
 gem 'materialize-sass'
 gem 'material_icons' 
 gem 'devise'
