@@ -64,20 +64,37 @@ li {
   background-position: center;
   background-attachment: fixed;
 }
+
 .splash-ships {
   background-image: image-url("new-ships.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
+
+.splash-ship {
+  background-image: image-url("concept.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 .splash-jobs-index {
   background-image: image-url("ships_dock.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
 }
+
 .splash-user {
-  background-image: image-url("load-jobs.jpg");
+  background-image: image-url("r2d2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.splash-register {
+  background-image: image-url("stargal2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -92,6 +109,20 @@ li {
 
 .assign-index {
   background-image: image-url("assign-index.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.assign-show {
+  background-image: image-url("c3po.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.jobs-show {
+  background-image: image-url("r2d2.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
