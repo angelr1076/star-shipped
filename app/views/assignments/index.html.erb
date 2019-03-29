@@ -1,11 +1,10 @@
+<body class="assign-index"></body>
 <p id="notice"><%= notice %></p>
 
 <h1>Assignments</h1>
 <% if user_signed_in? %>
 <%= button_to 'New Assignment', new_assignment_path, :method => :get, class: "waves-effect black btn large"  %>
 <% end %>
-
-<h5>Warning: you can create a new job but only the ship owner/captain can edit the job or transfer jobs to another ship!!! Jobs are owned by the ship Captain!!!</h5>
 
 <table>
   <thead>

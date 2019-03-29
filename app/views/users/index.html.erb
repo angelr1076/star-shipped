@@ -1,8 +1,11 @@
-<h4>All Captains:</h4>
+<body class="splash-user">
 
-<% @users.each do |user|%>
-    <li>
-        <p class="droidmail">Droidmail address:</p> <%= user.email %>
-    </li>
+    <h4>All Captains:</h4>
 
-<% end %>
+    <% @users.each do |user|%>
+        <li>
+            <p class="droidmail">Droidmail address:</p> <%= user.email %>
+        </li>
+
+    <% end %>
+</body>
