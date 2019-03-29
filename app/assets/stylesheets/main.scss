@@ -1,3 +1,9 @@
+:root {
+  --size: cover;
+  --position: center;
+  --attach: fixed;
+}
+
 body {
   margin: 0;
   color: rgb(236, 228, 236);
@@ -71,79 +77,79 @@ li {
 
 .splash-spaceport {
   background-image: image-url("space-port.png");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .splash-jobs {
   background-image: image-url("load-jobs.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .splash-ships {
   background-image: image-url("new-ships.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .splash-ship {
   background-image: image-url("concept.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .splash-jobs-index {
   background-image: image-url("ships_dock.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .splash-user {
   background-image: image-url("r2d2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .splash-register {
   background-image: image-url("stargal2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .assign-new {
   background-image: image-url("assign_new.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .assign-index {
   background-image: image-url("assign-index.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .assign-show {
   background-image: image-url("c3po.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 
 .jobs-show {
   background-image: image-url("r2d2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-size: var(--size);
+  background-position: var(--center);
+  background-attachment: var(--attach);
 }
 .card {
   color: rgb(238, 84, 37);
