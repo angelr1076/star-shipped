@@ -9,43 +9,51 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-      <!--views/devise/menu/_login_items.html.erb-->
     <nav>
-      <div class="nav-wrapper">
-      <a href="#"class="brand-logo">STAR-SHIPPED</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to "Home", root_path %></li>
-
-      <!--views/devise/menu/_registration_items.html.erb-->
-      <% if user_signed_in? %>
-         <li> <%= link_to "Edit Cap'n", edit_user_registration_path %></li>
-      <% else %>
-        <li><%= link_to('Register', new_user_registration_path)  %></li>
-      <% end %>
-
-      <!--<%= link_to "Sign In", user_session_path %>
-      <%= link_to "Sign Up", new_user_session_path%>-->
-      
-        <li> <%= link_to "Ships", ships_path %></li>
-        <li><%= link_to "Jobs", jobs_path %></li>
-        <li><%= link_to "Assignments", assignments_path %></li>
-      <% if user_signed_in? %>
-        <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
-      <% else %>
-        <li> <%= link_to('Login', new_user_session_path)  %> </li>
-      <% end %>
-      </ul>
+      <div class="page-container">
+        <div class="nav-wrapper">
+          <!--<a href="#" class="brand-logo right hide-on-med-and-down">Star-Shipped</a>-->
+            <ul id="nav-mobile" class="left">
+              <li><%= link_to "Home", root_path %></li>
+              <!--views/devise/menu/_registration_items.html.erb-->
+              <% if user_signed_in? %>
+                <li> <%= link_to "Edit Cap'n", edit_user_registration_path %></li>
+              <% else %>
+                <li><%= link_to('Register', new_user_registration_path)  %></li>
+              <% end %>
+              <!--<%= link_to "Sign In", user_session_path %>
+              <%= link_to "Sign Up", new_user_session_path%>-->
+                <li> <%= link_to "Ships", ships_path %></li>
+                <li><%= link_to "Jobs", jobs_path %></li>
+                <li><%= link_to "Assignments", assignments_path %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to('Logout', destroy_user_session_path, method: :delete) %></li>
+              <% else %>
+                <li> <%= link_to('Login', new_user_session_path)  %> </li>
+              <% end %>
+            </ul>
+        </div>
+      </nav>
+    <div class="page-container">
+      <header>
+        <div id="login-message">
+          <% if user_signed_in?  %>
+            <div><h5>Signed in as: <%= current_user.email %></h5></div>
+          <% end %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+      </header>
+      <main>
+      <%= yield %> 
+      </main>
+      <footer class="footer black">
+        <div class="container">
+          © 2019 Star-Shipped
+        </div>
+      </footer>
     </div>
-  </nav>
-       <div id="login-message">
-        <% if user_signed_in?  %>
-          <div><h5>Signed in as: <%= current_user.email %></h5></div>
-        <% end %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      </div>
-    <%= yield %>
-  </body>
+  </div>
+</body>
 </html>
