@@ -5,7 +5,8 @@ class Ship < ApplicationRecord
 
     belongs_to :user
     has_many :assignments
-    has_many :jobs, :through => :assignments
+    # Added to remove job when ship is destroyed
+    has_many :jobs, :through => :assignments, dependent: :destroy
 
     validates :name, uniqueness: true, presence: true
 
